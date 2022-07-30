@@ -11,11 +11,11 @@ import {
   AppNewsUpdate,
   AppOrderTimeline,
   AppCurrentVisits,
-  AppWebsiteVisits,
   AppTrafficBySite,
   AppWidgetSummary,
   AppCurrentSubject,
   AppConversionRates,
+  AppWebsiteVisits,
 } from '../sections/@dashboard/app';
 
 // ----------------------------------------------------------------------
@@ -24,33 +24,34 @@ export default function DashboardApp() {
   const theme = useTheme();
 
   return (
-    <Page title="Dashboard">
+    <Page title="Home">
       <Container maxWidth="xl">
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+        <Typography variant="h3" sx={{ mb: 5 }}>
+          TRENDING
         </Typography>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={1}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
+            <AppWidgetSummary title="Sector E, Phase 8, Bahria Town" total={7} unit={"Marla"} color="primary" />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary title="Sector P, Phase 8, Bahria Town" total={10} unit={"Marla"} color="primary" icon={'ant-design:apple-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
+            <AppWidgetSummary title="Sector B, Phase 8, Bahria Town" total={1} unit={"Kanal"} color="primary" icon={'ant-design:windows-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
+            <AppWidgetSummary title="Sector L, Phase 8, Bahria Town" total={14} unit={"Marla"} color="primary"  icon={'ant-design:bug-filled'} />
           </Grid>
-
-          <Grid item xs={12} md={6} lg={8}>
+          {/* carousel here */}
+          <Grid item xs={12} md={6} mt={5} lg={8}><AppWebsiteVisits title="About Us"/></Grid> 
+          {/* <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="Website Visits"
-              subheader="(+43%) than last year"
+              title="Buy or Sell your Property"
+              subheader="Contact us and keep your self updated"
               chartLabels={[
                 '01/01/2003',
                 '02/01/2003',
@@ -85,11 +86,11 @@ export default function DashboardApp() {
                 },
               ]}
             />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6}  lg={4}>
             <AppCurrentVisits
-              title="Current Visits"
+              title="third"
               chartData={[
                 { label: 'America', value: 4344 },
                 { label: 'Asia', value: 5435 },
